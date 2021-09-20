@@ -1,0 +1,17 @@
+<h2>New Books</h2>
+
+<%= form_for(@message) do |f|%>
+<%= render 'layouts/error_messages', model: f.object %>
+<div class="form-group">
+<%= f.label :title %>
+<%= f.text_field :title %>
+</div>
+
+<div class="form-group">
+<%= f.label :body %>
+<%= f.text_area :body %>
+</div>
+
+<%= f.submit "Create Book", class: "btn-primary" %>
+
+<% end %>

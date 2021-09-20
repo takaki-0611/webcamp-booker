@@ -1,0 +1,14 @@
+<% if flash[:notice] %>
+  <div class="alert alert-primary" role="alert">
+    <%= notice %>
+  </div>
+<% end %>
+
+<h2>title</h2>
+<p><%= @book.title %></p>
+<h2>body</h2>
+<p><%= @book.body %></p>
+<span>
+ <%= link_to "Edit", edit_book_path(@book.id) %>
+ <%= link_to "Back", books_path %>
+</span>
